@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.TabPane?>
+<?import com.automation.device.controllers.*?>
+<?import com.automation.device.controllers.ScreenController?>
+<?import com.automation.device.controllers.AppsController?>
+<?import com.automation.device.controllers.LogController?>
+
+<fx:root type="TabPane" id="deviceContent" translateY="5" translateX="5" tabMinWidth="80.0" xmlns:fx="http://javafx.com/fxml">
+    <tabs>
+		<Tab text="SCREEN" fx:id="screenTab" closable="false">
+			<ScreenController />
+		</Tab>
+	    <Tab text="APPS" fx:id="appsTab" closable="false">
+	    	<AppsController />
+	    </Tab>
+	    <Tab text="LOG" fx:id="logTab" closable="false">
+	    	<LogController />
+	    </Tab>
+	</tabs>
+</fx:root>

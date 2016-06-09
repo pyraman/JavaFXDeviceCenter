@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+
+<VBox id="deviceListContent" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.automation.device.controllers.DeviceListController" >
+	<children>
+        <ListView fx:id="listDevices"></ListView>
+    </children>
+</VBox>
+
