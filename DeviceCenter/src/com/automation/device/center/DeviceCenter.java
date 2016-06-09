@@ -7,10 +7,8 @@ package com.automation.device.center;
 
 import java.io.IOException;
 
-import com.automation.device.views.ResourceLoader;
-
+import com.automation.device.controllers.DeviceCenterController;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -24,7 +22,8 @@ public class DeviceCenter extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
     	
-    	Parent root = FXMLLoader.load(ResourceLoader.class.getResource("DeviceCenter.fxml"));
+    	DeviceCenterController deviceCenterCtrl = new DeviceCenterController();
+    	Parent root = deviceCenterCtrl.getRoot();
     
         Scene scene = new Scene(root, 1200, 800);
         primaryStage.setTitle("Device Center");

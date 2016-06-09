@@ -1,16 +1,32 @@
 package com.automation.device.controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
+import com.automation.device.views.ResourceLoader;
 
-import javafx.fxml.Initializable;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.layout.BorderPane;
 
-public class DeviceCenterController implements Initializable{
+public class DeviceCenterController extends BorderPane{
+	@FXML private CenterStatusController centerStatusCtrl;
+	@FXML private DeviceListController deviceListCtrl;
+	@FXML private DeviceController deviceCtrl;
+	
+	private Parent root = null;
+	
+	public DeviceCenterController() {
+		FXMLLoader fxmlLoader = new FXMLLoader(ResourceLoader.class.getResource("DeviceCenter.fxml"));
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
+		fxmlLoader.setController(this);
+	    try {
+	    	root = fxmlLoader.load();
+	    } catch (IOException exception) {
+	        throw new RuntimeException(exception);
+	    }
 	}
-
+	
+	public Parent getRoot(){
+		return root;
+	}
 }

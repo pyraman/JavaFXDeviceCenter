@@ -17,11 +17,11 @@ import javafx.scene.control.TabPane;
 
 public class DeviceController extends TabPane{
     @FXML
-    private ScreenController screenContent;
+    private ScreenController screenCtrl;
     @FXML
-    private AppsController appsContent;
+    private AppsController appsCtrl;
     @FXML
-    private LogController logContent;
+    private LogController logCtrl;
 
     public DeviceController() {
 		FXMLLoader fxmlLoader = new FXMLLoader(ResourceLoader.class.getResource("Device.fxml"));
