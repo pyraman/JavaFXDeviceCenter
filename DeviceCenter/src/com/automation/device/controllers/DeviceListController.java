@@ -1,19 +1,21 @@
 package com.automation.device.controllers;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
+import com.automation.device.views.ResourceLoader;
 
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.VBox;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 
-public class DeviceListController extends VBox implements Initializable  {
-	@FXML private ListView listDevices;
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
+public class DeviceListController extends AnchorPane  {
+	
+	public DeviceListController() {
+		FXMLLoader fxmlLoader = new FXMLLoader(ResourceLoader.class.getResource("DeviceList.fxml"));
+    	fxmlLoader.setRoot(this);
+		fxmlLoader.setController(this);
+	    try {
+	        fxmlLoader.load();
+	    } catch (IOException exception) {
+	        throw new RuntimeException(exception);
+	    }
 	}
-
 }
