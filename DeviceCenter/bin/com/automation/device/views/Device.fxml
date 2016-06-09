@@ -12,16 +12,17 @@
 <?import com.automation.device.controllers.AppsController?>
 <?import com.automation.device.controllers.LogController?>
 
-<fx:root type="TabPane" id="deviceContent" translateY="5" translateX="5" tabMinWidth="80.0" xmlns:fx="http://javafx.com/fxml">
+<fx:root type="TabPane" id="deviceContent" tabMinWidth="80.0" xmlns:fx="http://javafx.com/fxml"
+	style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;">
     <tabs>
 		<Tab text="SCREEN" fx:id="screenTab" closable="false">
-			<ScreenController />
+			<ScreenController fx:id="screenCtrl"/>
 		</Tab>
 	    <Tab text="APPS" fx:id="appsTab" closable="false">
-	    	<AppsController />
+	    	<AppsController fx:id="appsCtrl"/>
 	    </Tab>
 	    <Tab text="LOG" fx:id="logTab" closable="false">
-	    	<LogController />
+	    	<LogController fx:id="logCtrl"/>
 	    </Tab>
 	</tabs>
 </fx:root>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -9,23 +8,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import com.automation.device.controllers.*?>
 <?import com.automation.device.controllers.DeviceController?>
+<?import com.automation.device.controllers.DeviceListController?>
+<?import com.automation.device.controllers.CenterStatusController?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="800.0" prefHeight="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" prefHeight="501.0" prefWidth="107.0" text="This is LEFT" />
-         </children>
-      </VBox>
+      <DeviceListController fx:id="deviceListCtrl" prefWidth="300.0" prefHeight="500"/>
    </left>
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="800.0" text="This is TOP" />
-         </children>
-      </HBox>
+      <CenterStatusController fx:id="centerStatusCtrl"/>
    </top>
    <center>
-   		<DeviceController />
+   		<DeviceController fx:id="deviceCtrl"/>
    </center>
 </BorderPane>
